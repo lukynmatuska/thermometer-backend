@@ -1,0 +1,33 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Location {
+  id    Int @id @default(autoincrement())
+}
+
+model Measurement {
+  id            Int      @id @default(autoincrement())
+  date          DateTime @default(now()) @db.Timestamp(6)
+  temperature   Float
+  humidity      Float
+  pressure      Float
+  altitude      Float
+  dewpoint      Float
+  authorId      Int
+  User          User     @relation(fields: [authorId], references: [id])
+}
+
+model Device {
+  id            Int     @id @default(autoincrement())
+  token         String
+  measurements  Measurement[]
+}

@@ -1,0 +1,33 @@
+{
+  "name": "thermometer-backend",
+  "version": "1.0.0",
+  "description": "Backend for thermometer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukynmatuska/thermometer-backend.git"
+  },
+  "author": "Lukas Matuska matuska.lukas@lukasmatuska.cz",
+  "license": "Beerware",
+  "bugs": {
+    "url": "https://github.com/lukynmatuska/thermometer-backend/issues"
+  },
+  "homepage": "https://github.com/lukynmatuska/thermometer-backend#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-redis": "^5.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "moment": "^2.29.1",
+    "path": "^0.12.7",
+    "redis": "^3.1.2"
+  },
+  "devDependencies": {
+    "prisma": "^2.22.1"
+  }
+}
